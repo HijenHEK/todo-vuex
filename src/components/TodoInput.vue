@@ -24,7 +24,7 @@ export default {
             if(!this.newTodo){
                 this.err = 'Emty Field !!'
             }else {
-                console.log('adding')
+                this.$store.dispatch('TODO_ADD', this.newTodo)
             }
         },
         inputChange(){

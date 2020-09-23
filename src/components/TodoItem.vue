@@ -1,11 +1,13 @@
 <template>
     <div id="TodoItem">
-        <div class="title">
+        <div class="title" :class="{'done' : todo.done}">
             {{todo.title}}
         </div>
         <div class="controls">
-            <button class="btn btn-sucess" v-if="! todo.done">done ?</button>
-            <button class="btn btn-danger">delete</button>
+            <button class="btn btn-primary" v-if="todo.done" @click="todoDone">not done yet ?</button>
+
+            <button class="btn btn-sucess" v-if="! todo.done" @click="todoDone">done ?</button>
+            <button class="btn btn-danger" @click="todoDel">delete</button>
         </div>
     </div>
 </template>
@@ -15,6 +17,15 @@
 export default {
     name : "TodoItem" ,
     props : ['todo'] ,
+    methods : {
+        todoDone() {
+            this.$store.dispatch('TODO_DONE' , this.todo)
+        },
+        todoDel() {
+            this.$store.dispatch('TODO_DEL' , this.todo)
+        }
+
+    }
 }
 </script>
 
@@ -43,5 +54,8 @@ export default {
     }
     .controls>button:last-child {
         margin-left: 0.5rem;
+    }
+    .done {
+        text-decoration: line-through;
     }
 </style>
