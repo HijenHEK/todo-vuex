@@ -12,6 +12,7 @@
 
 <script>
 export default {
+    name : "TodoInput",
     data() {
         return {
             newTodo : '' ,

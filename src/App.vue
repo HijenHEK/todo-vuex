@@ -4,16 +4,19 @@
       Todo List with Vuejs and Vuex
     </h1>
     <TodoInput />
+
+    <TodoList />
   </div>
 </template>
 
 <script>
 import TodoInput from './components/TodoInput.vue'
-
+import TodoList from './components/TodoList.vue'
 export default {
   name: 'App',
   components: {
-    TodoInput
+    TodoInput,
+    TodoList
   }
 }
 </script>
