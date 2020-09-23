@@ -27,5 +27,7 @@ export default {
 <style scoped>
     #TodoList {
         margin-top: 2rem;
+        width: 100%;
+        
     }
 </style>

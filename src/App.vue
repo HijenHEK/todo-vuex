@@ -23,6 +23,7 @@ export default {
 
 <style>
 #app {
+  box-sizing: border-box;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,6 +37,34 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 5px ;
+    color: white;
+
+}
+.btn:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.btn-sucess {
+  background-color: rgb(52, 150, 52);
+}
+.btn-danger {
+  background-color: rgb(226, 5, 5);
+
+}
+.btn-primary {
+  background-color: rgb(5, 101, 226);
   
 }
 </style>
