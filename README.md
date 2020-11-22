@@ -1,5 +1,11 @@
 # todo-vuex
 
+
+## description
+
+this another version of my todo-vue created to learn the state management offered by vuex
+
+
 ## Project setup
 ```
 npm install
